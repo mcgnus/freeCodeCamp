@@ -35,7 +35,7 @@ tests:
   - text: The <code>main</code> element should have two paragraph elements as children.
     testString: assert($("main").children("p").length === 2, 'The <code>main</code> element should have two paragraph elements as children.');
   - text: The opening <code>main</code> tag should come before the first paragraph tag.
-    testString: assert(code.match(/<main>\s*?<p>/g), 'The opening <code>main</code> tag should come before the first paragraph tag.');
+    testString: assert(code.match(/<main>[\W\w]*?<p>/g), 'The opening <code>main</code> tag should come before the first paragraph tag.');
   - text: The closing <code>main</code> tag should come after the second closing paragraph tag.
     testString: assert(code.match(/<\/p>\s*?<\/main>/g), 'The closing <code>main</code> tag should come after the second closing paragraph tag.');
 
